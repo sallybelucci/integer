@@ -1,0 +1,18 @@
+using System;
+
+public class DigitSumCalculator {
+    public static int CalculateDigitSum(int number) {
+        int sum = 0;
+        while (number != 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+        return sum;
+    }
+
+    public static void Main(string[] args) {
+        int number = 12345;
+        int digitSum = CalculateDigitSum(number);
+        Console.WriteLine("Sum of digits in " + number + ": " + digitSum);
+    }
+}
